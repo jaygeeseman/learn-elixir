@@ -3,12 +3,12 @@ defmodule AnimalsTest do
   doctest Animals, except: [{:randomise, 1}, {:selection, 1}]
 
   test "randomise" do
-    zoo = Animals.create_zoo
+    zoo = Animals.create_zoo()
     refute zoo == Animals.randomise(zoo)
   end
 
   test "selection" do
-    zoo = Animals.create_zoo
+    zoo = Animals.create_zoo()
     refute Animals.see_animals(zoo, 2) == Animals.selection(2)
   end
 end
